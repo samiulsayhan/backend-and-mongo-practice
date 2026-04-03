@@ -7,7 +7,13 @@ const reload = require("reload");
 const express = require('express')
 const app = express();
 
-app.use(); // ae line ta use korar karon kono route a jaete hole age ae code ta re face korbe then route ar url jabe and reload hobe , ami chaele ae line ar code a kono condition o bosae dite pari jodi dorkar hoi
+// ae line ta use korar karon kono route a jaete hole age ae code ta re face korbe then route ar url jabe and reload hobe , ami chaele ae line ar code a kono condition o bosae dite pari jodi dorkar hoi
+app.use(function(req, res, next){
+    console.log("aeta thik moto run korse")
+    // aekhane jekono condition dite parbo pura amar control a but.. jodi last a .. next() .. ae code ta na dae tahole code ar age jabe na aekhane e atke thakbe ar page ar reload sudhu ghurle thakbe , ae jonne ..next().. sob condition dea hoea gele last a next() aeta dite hobe must..
+    next();
+}); 
+// 
 
 app.get("/",function(req,res){
     res.send(`
