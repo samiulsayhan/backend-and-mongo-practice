@@ -7,6 +7,8 @@ const reload = require("reload");
 const express = require('express')
 const app = express();
 
+app.use(); // ae line ta use korar karon kono route a jaete hole age ae code ta re face korbe then route ar url jabe and reload hobe , ami chaele ae line ar code a kono condition o bosae dite pari jodi dorkar hoi
+
 app.get("/",function(req,res){
     res.send(`
         <h1>hey man...</h1>
