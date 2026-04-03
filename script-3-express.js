@@ -17,21 +17,31 @@ app.use(function(req, res, next){
 
 app.get("/",function(req,res){
     res.send(`
-        <h1>hey man...</h1>
+        <h1>hey man.</h1>
         <script src="/reload/reload.js"></script>
         `)
 })
 
-app.get("/about", function(req,res){
+app.get("/about", function(req,res,next){
     res.send(`
-        <h1>this is about page..</h1>
+        <h1>this is about page...</h1>
         <script src="/reload/reload.js"></script>
         `)
+
+    // return next(new Error("akta somossa hoese"))
+});
+
+// error handle korar joone ae nicher error handler ta use korsi
+
+app.use((err,req,res,next)=>{
+    console.error(err.stack)
+    res.status(500).send('something broke')
 })
 
+// server port:3000 chalu korar jonno nicher ae code ta leksi
 app.listen(3000);
 
-// attach reload
+// kono code update hoelae browser auto reload nebe ae nicher code ar karone
 reload(app).then((reloadReturned) => {
   // optional: trigger reload manually
 });
