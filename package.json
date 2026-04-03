@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "accessibility": "^3.0.9",
+    "express": "^5.2.1",
+    "reload": "^3.4.3",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
