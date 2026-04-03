@@ -23,6 +23,10 @@ const reload = require("reload");
 const express = require('express')
 const app = express();
 
+app.use(express.json());// aetar maddhobe server a data jasse json formate a
+app.use(express.urlencoded({extended: true})); // this line is for separate data handle in same server
+
+
 // ae line ta use korar karon kono route a jaete hole age ae code ta re face korbe then route ar url jabe and reload hobe , ami chaele ae line ar code a kono condition o bosae dite pari jodi dorkar hoi
 app.use(function(req, res, next){
     console.log("aeta thik moto run korse")
