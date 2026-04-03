@@ -1,3 +1,19 @@
+// whats is inside this file
+// Express.js is a framework
+// introdution to express.js
+// express.js is an npm package and also a framework
+// managing everything from receving and giving respons
+
+// setting up a basic express aplication
+// Routing
+
+// middleware
+// request and respons handlig
+// error handling
+
+// ..........//
+
+
 // e khane ami siksi kivabe express dea routes handle korte hoi , nodemon ae npm package use korle code a kono notun update hole server auto reset nae, npm reload package use korle abong html code ar vitor <script src="/reload/reload.js"></script> ae code ta use korle browser auto relode nae protibar code change hole , fole bar bar browser reload dea lage na new update dekhar jonne'.. 
 
 // kintu script proti route a use korte hobe nahole akta route auto reload nibe but onno route auto reload nibe na
