@@ -37,11 +37,7 @@ app.post("/update",function(req,res){
         res.redirect('/')
     })
 })
-// fs.rename( "hello.jsx","hello.txt", function (err) {
 
-//     if (err) console.error(err)
-//     else console.log("done")
-// })
 
 app.get("/file/:filename",function(req,res){
     fs.readFile(`./files/${req.params.filename}`,"utf-8",function(err,filedata){
