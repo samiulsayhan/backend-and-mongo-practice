@@ -31,6 +31,18 @@ app.post("/create",function(req,res){
     })
 })
 
+app.post("/update",function(req,res){
+    console.log(req.body);
+    fs.rename(`./files/${req.body.previousname}.txt`,`./files/${req.body.newname}.txt`, function(err){
+        res.redirect('/')
+    })
+})
+// fs.rename( "hello.jsx","hello.txt", function (err) {
+
+//     if (err) console.error(err)
+//     else console.log("done")
+// })
+
 app.get("/file/:filename",function(req,res){
     fs.readFile(`./files/${req.params.filename}`,"utf-8",function(err,filedata){
         res.render('show',{filename: req.params.filename , filedata: filedata})

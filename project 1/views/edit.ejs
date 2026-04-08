@@ -14,11 +14,13 @@
     <div class="main w-full min-h-screen text-white bg-gray-800 p-10">
         <a href="/" class="text-blue-600">go back to home</a>
         <!-- <h1 class="text-3xl mt-5 "><%= filename.slice(0, -4) %></h1> -->
-        <form class="mt-5 text-white" action="/create" method="post">
+        <form class="mt-5 text-white" action="/update" method="post">
             <input class="w-1/4 rounded-md block px-5 py-2 bg-gray-600 " type="text" placeholder="Current file name"
-                name="title" value="<%= filename.slice(0, -4) %>">
-            <textarea class="w-1/4 rounded-md mt-2  block resize-none px-5 py-2 bg-gray-600"
-                placeholder="New file name " name="details"></textarea>
+                name="previousname" value="<%= filename.slice(0, -4) %>">
+            <input class="w-1/4 rounded-md mt-2  block resize-none px-5 py-2 bg-gray-600" type="text" placeholder="new file name"
+                name="newname" >
+            <!-- <textarea class="w-1/4 rounded-md mt-2  block resize-none px-5 py-2 bg-gray-600"
+                placeholder="New file name " name="newname"></textarea> -->
             <input class="mt-2 bg-orange-600 rounded-md px-5 py-2" type="submit" value="Update">
         </form>
     </div>
